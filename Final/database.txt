@@ -1,0 +1,6 @@
+{"username":"claire","text":"new 4","date":"2024/5/2 13:55:08","privacy":"public","comments":[{"text":"hi","user":"claire"},{"text":"hih","user":"claire"}],"timestamp":1714672508445,"_id":"qPEBn6je2UwOT8Th"}
+{"username":"claire","text":"new 5","date":"2024/5/2 13:55:50","privacy":"private","comments":[],"timestamp":1714672550312,"_id":"tqph2UdqXSgtszUl"}
+{"username":"claire","text":"hi","date":"2024/5/2 14:09:03","privacy":"private","comments":[],"timestamp":1714673343609,"_id":"uuqAZOkapzhfSprn"}
+{"username":"claire","text":"this is a new public post","date":"2024/5/2 14:27:53","privacy":"public","comments":[{"text":"this is a new comment","user":"claire"}],"timestamp":1714674473029,"_id":"v2ALNnBnGtHTOK4P"}
+{"username":"claire","text":"new new post","date":"2024/5/2 14:38:43","privacy":"public","comments":[],"timestamp":1714675123641,"_id":"1QpjSUkctr5y4shO"}
+{"username":"claire","text":"new new post","date":"2024/5/2 14:38:43","privacy":"public","comments":[{"text":"hi","user":"claire"}],"timestamp":1714675123641,"_id":"1QpjSUkctr5y4shO"}

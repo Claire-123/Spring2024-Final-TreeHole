@@ -1,0 +1,23 @@
+<%- include('backToStart.ejs') %>
+<div class="form-container">
+    <div class="title"> Register new account</div>
+
+    <% if(error == "repeate"){ %>
+        <h3 class="error"> The username is already been taken</h3>
+    <% } else if (error == "incomplete"){ %>
+        <h3 class="error"> Please complete the form</h3>
+    <% } %>
+
+
+    <form method="POST" action="/signup">
+            <div class="username-input">
+                <p>Choose a username</p>
+                <input type="text" name="username" class="input-box">
+            </div>
+            <div class="password-input">
+                <p>Choose password</p>
+                <input type="password" name="password" class="input-box">
+            </div>
+            <input type="submit" name="submitbutton" value="make my account!" class="submit-btn">
+    </form>
+</div>

@@ -1,0 +1,91 @@
+<head>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <script type="module" crossorigin src="/assets/room-DQ_YHOCE.js"></script>
+    <!-- <script src="/animation.js"></script> -->
+    <!-- <link rel="stylesheet" crossorigin href="/assets/three-story-controls.esm-CtpVPblG.css"> -->
+
+    <!-- <button id="showFormButton">Upload Your Thoughts</button> -->
+
+    <div id="post-indicate" style="display: none;">make a post</div>
+    <div id="read-indicate" style="display: none;">view all posts</div>
+    <div id="mail-indicate" style="display: none;">comments to you</div>
+    <div id="door-indicate" style="display: none;">log out</div>
+
+    <div id="makePost" style="display: none;">
+        <button id="post-cross">✕</button>
+        <h2>Make a New Post</h2>
+        <div class="postForm-container">
+            <form method="POST" action="/upload">
+                <div>Talk about your worries</div>
+                <textarea name="text" placeholder=""></textarea>
+                <div class="privacy-select">
+                    <div style="margin-bottom: 10px;">Do you want this post be PRIVATE or PUBLIC?</div>
+                    <div style="font-size: 16px; color: rgba(255, 255, 255, 0.7); margin-left: 10px;">
+                        * PRIVATE: only you can see this post <br>
+                        &nbsp;&nbsp; PUBLIC: others can also see this post and comment
+                    </div>
+                    <div class="radio-btn-container">
+                        <div class="radio-btn">
+                            <input type="radio" id="private" name="privacy" value="private" checked>
+                            <label>PRIVATE</label>
+                        </div>
+                        <div class="radio-btn">
+                            <input type="radio" id="public" name="privacy" value="public">
+                            <label>PUBLIC</label>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" name="submitbutton" value="Submit" class="submit-post">
+            </form>
+        </div>
+    </div>
+
+    <!-- <button id="showAllPosts">Show all posts</button> -->
+
+    <div id="all-posts" style="display: none;">
+        <button id="all-cross">✕</button>
+        <h2>All Your Posts</h2>
+        <div class="posts-container">
+            <% posts.forEach((post)=>{ %>
+                <div class="singlePost">
+                    <!-- <form method="POST" class="remove-button">
+                        <label for="post-<%=post._id%>"></label>
+                        <input id="post-<%=post._id%>" class="remove-cross" type="submit" name="removeButton" value="✕ REMOVE" />
+                        <input type="hidden" name="postId" value="<%=post._id%>" />
+                    </form> -->
+                    <div style="color: rgba(87, 44, 23, 0.5);"> 
+                        <%= post.date %>
+                        <%= post.privacy %>
+                    </div>
+                    <div class="text"> <%= post.text %></div>
+                </div>
+            <% }) %>
+        </div>
+
+        <div class="to-public">
+            <a href="/public">View public posts</a>
+        </div>
+    </div>
+
+    <div id="comments" style="display: none;">
+        <button id="mail-cross">✕</button>
+        <h2> See all the comments to you</h2>
+        <div class="posts-container">
+            <% posts.forEach((post)=>{ %>
+                <% if (post.comments) { %>
+                    <% post.comments.forEach((comment) =>{ %>
+                        <a href="/post/<%=post._id%>">
+                            <div class="singlePost">
+                                <div class="text" style="color: rgb(87, 44, 23);"> <%= comment.text %></div>
+                            </div>
+                        </a>
+                    <% }) %>
+                <% } %>
+            <% }) %>
+        </div>
+    </div>
+
+    <!-- <a href="/publicPlace">to public space</a> -->
+</body>

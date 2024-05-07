@@ -1,0 +1,22 @@
+<%- include('backToStart.ejs') %>
+<div class="form-container">
+    <div class="title">Log in</div>
+
+    <% if(error == "access"){ %>
+        <h3 class="error"> Please log in first</h3>
+    <% } else if (error == "password" || error == "user"){ %>
+        <h3 class="error"> Wrong user name or password</h3>
+    <% } %>
+
+    <form method="POST" action="/authenticate">
+        <div class="username-input">
+            <p>Username</p>
+            <input type="text" name="username" class="input-box">
+        </div>
+        <div class="password-input">
+            <p>Password</p>
+            <input type="password" name="password" class="input-box">
+        </div>
+        <input type="submit" name="submitbutton" value="Log in" class="submit-btn">
+    </form>
+</div>

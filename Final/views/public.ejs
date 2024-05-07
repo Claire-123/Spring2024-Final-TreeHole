@@ -1,0 +1,27 @@
+<head>
+    <link rel="stylesheet" href="/style2.css">
+</head>
+<body>
+    <div class="background-img">
+        <img src="/background.png">
+    </div> 
+
+    <div class="title">
+        Welcome to the Public Space
+    </div>
+
+    <div id="all-posts">
+        <div class="posts-container">
+            <% posts.forEach((post)=>{ %>
+                <a href="/post/<%=post._id%>" class="singlePost">
+                        <div style="color: rgba(87, 44, 23, 0.5);"> 
+                            <%= post.date %>
+                        </div>
+                        <div class="text"> <%= post.text %></div>
+                </a>
+            <% }) %>
+        </div>
+    </div>
+
+    <a class="back-arrow" href="/private">◀ Back to private space</a>
+</body>

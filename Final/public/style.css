@@ -1,0 +1,393 @@
+body{
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Candara';
+}
+
+a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+/* Entrance ------------------------------------------------- */
+.instruction{
+    position: fixed;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    animation: breathAnimation 3s ease-in-out infinite;
+}
+
+@keyframes breathAnimation {
+    0%, 100% {
+      opacity: 1; 
+    }
+    50% {
+      opacity: 0.3;
+    }
+}
+/* Entrance ------------------------------------------------- */
+
+/* Start ------------------------------------------------- */
+#toWhite{
+  background: rgb(0, 0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  animation: toWhite 1s ease-in forwards;
+  z-index: 2;
+}
+
+@keyframes toWhite {
+  0% {
+    opacity: 1; 
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.background-img{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 0;
+}
+
+.background-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.title-img{
+  position: relative;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  max-width: 80vw;
+  max-height: 100vh;
+}
+
+.title-img img{
+  width: 100%;
+  object-fit: contain;
+}
+
+.login-container{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  bottom: 15%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 20px;
+  font-family: 'Candara';
+}
+
+.login-btn{
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  border-radius: 500px;
+  background-color: rgb(207, 146, 88);
+
+  font-size: 24px;
+  color: white;
+
+  transition: color 0.25s linear;
+}
+
+.login-btn:hover{
+  background-color: rgb(255, 219, 186);
+  color: brown;
+}
+
+.signup-text{
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.signup-text:hover{
+  color: rgb(207, 146, 88);
+}
+/* Start ------------------------------------------------- */
+
+/* Login & Signup ------------------------------------------------- */
+.form-container{
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 50px;
+  border-radius: 10px;
+
+  text-align: center;
+}
+
+.title{
+  text-align: center;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.username-input, .password-input{
+  margin-top: 20px;
+}
+
+.username-input p, .password-input p{
+  text-align: left;
+  color: white;
+  font-size: 20px;
+  margin: 5px 10px;
+}
+
+.input-box{
+  width: 300px;
+  height: 40px;
+  border-radius: 500px;
+
+  padding-left: 15px;
+
+  background-color: rgb(227, 188, 151);
+  border: none;
+}
+
+.input-box:focus{
+  border: none;
+  background-color: white;
+}
+
+.submit-btn{
+  margin-top: 50px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 500px;
+  font-weight: bold;
+  font-size: 16px;
+  color: rgb(169, 89, 49);
+  background-color: white;
+}
+
+.submit-btn:hover{
+  color: white;
+  background-color: rgb(169, 89, 49);
+  cursor: pointer;
+}
+
+form{
+  margin: 0;
+}
+/* Login & Signup ------------------------------------------------- */
+
+/* Back ------------------------------------------------- */
+.back-arrow{
+  position: fixed;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.back-arrow a:hover{
+  color: red;
+}
+/* Back ------------------------------------------------- */
+
+#post-indicate{
+  position: fixed;
+  color: white;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 20px;
+}
+
+#makePost, #all-posts, #comments{
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: rgba(243, 216, 173, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+
+  width: 40vw;
+  height: 70vh;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: rgb(87, 44, 23);
+}
+
+.postForm-container{
+  width: 90%;
+  margin: auto;
+  color: white;
+}
+
+.postForm-container textarea{
+  width: 100%;
+  max-width: 100%;
+  height: 40%;
+  max-height: 60%;
+
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+}
+
+.privacy-select{
+  margin: 20px 0;
+}
+
+.radio-btn-container{
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  margin-top: 15px;
+  color: rgb(169, 89, 49);
+}
+
+.radio-btn{
+  background-color: rgb(243, 216, 173);
+  border-radius: 50px;
+  padding: 2px 7px;
+  margin-right: 20px;
+} 
+
+.radio-btn label{
+  padding-right: 10px;
+  font-size: 18px;
+}
+
+.submit-post{
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  padding: 10px 20px;
+  border: none;
+  border-radius: 500px;
+  font-weight: bold;
+  font-size: 16px;
+  color: rgb(169, 89, 49);
+  background-color: white;
+}
+
+.submit-post:hover{
+  color: white;
+  background-color: rgb(169, 89, 49);
+  cursor: pointer;
+}
+
+#all-posts h2, #makePost h2, #comments h2{
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 45px;
+}
+
+.posts-container{
+  width: 90%;
+  max-height: 70%;
+  margin: auto;
+
+  padding-right: 10px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.posts-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.posts-container::-webkit-scrollbar-button {
+  display: none;
+}
+
+.posts-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.posts-container::-webkit-scrollbar-thumb {
+  background-color: rgb(243, 216, 173);
+  border-radius: 10px;
+}
+
+.singlePost{
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+
+  background-color: rgba(243, 216, 173, 0.7);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.to-public{
+  text-align: center;
+  margin-top: 50px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 500px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: rgb(243, 216, 173);
+  width: 40%;
+
+  position: inherit;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.to-public a{
+  color: rgb(169, 89, 49);
+}
+
+.to-public:hover{
+  background-color: white;
+  cursor: pointer;;
+}
+
+#all-cross, #post-cross, #mail-cross{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+
+#all-cross:hover, #post-cross:hover, #mail-cross:hover, .remove-cross:hover{
+  cursor: pointer;
+}
+
+.remove-button{
+  position: absolute;
+  right: 5%; 
+  transform: translate(-50%, 0);
+}
+
+.remove-cross{
+  background: none;
+  border: none;
+  color: rgba(87, 44, 23, 0.7);
+}

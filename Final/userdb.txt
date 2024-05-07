@@ -1,0 +1,3 @@
+{"username":"sirui","password":"$2b$10$W/h5asQ.Dg/L2wAnsqUyveT9YKjfwKQTHMGBcZ7SBymr2znNDfQNu","_id":"2zpgP3KBhy1I4u5D"}
+{"username":"Claire","password":"$2b$10$7Vt0zUQyHRd8LavGWuC7pea25jW8eIdA.D2U2UDhI0sUCKR9fmdVi","_id":"G7QwK5yzY7r3GA8K"}
+{"username":"claire","password":"$2b$10$fL8fV5n2lLj0uTn14efln.7xKgeHQXRKQIVbWvEwcPaGdUnZ7avBq","_id":"SIXdsw1U0xyZjG3r"}
